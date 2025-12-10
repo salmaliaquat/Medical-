@@ -4,7 +4,7 @@
 import { useState } from "react";
 
 import { Outlet, useLocation } from "react-router-dom";
-import Sidebar from "../common/sidebar";
+import Sidebar from "../common/Sidebar.JSX";
 import Topbar from "../common/Topbar";
 import { Sidebar } from "lucide-react";
 
