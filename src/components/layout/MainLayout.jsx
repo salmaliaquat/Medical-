@@ -1,41 +1,12 @@
 
 
 
-// import { useState } from "react";
-// import Sidebar from "../common/sidebar";
-// import Topbar from "../common/Topbar";
-// import { Outlet } from "react-router-dom";
-
-// const MainLayout = () => {
-//   const [sidebarOpen, setSidebarOpen] = useState(false); // track sidebar state
-
-//   return (
-//     <div className="min-h-screen flex bg-white">
-//       {/* Sidebar */}
-//       <Sidebar isOpen={sidebarOpen} setIsOpen={setSidebarOpen} />
-
-//       <div className="flex-1 flex flex-col">
-//         {/* Topbar */}
-//         <Topbar sidebarOpen={sidebarOpen} />
-
-//         {/* Page Content */}
-//         <main className="flex-1 transition-all duration-300 pt-20 px-4 bg-gray-50"
-//           style={{ marginLeft: sidebarOpen ? "15rem" : "5.75rem" }} // match w-60/w-23 from Tailwind
-//         >
-//           <Outlet />
-//         </main>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default MainLayout;
-
-
 import { useState } from "react";
+
+import { Outlet, useLocation } from "react-router-dom";
 import Sidebar from "../common/sidebar";
 import Topbar from "../common/Topbar";
-import { Outlet, useLocation } from "react-router-dom";
+import { Sidebar } from "lucide-react";
 
 const MainLayout = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -66,11 +37,13 @@ const MainLayout = () => {
   return (
     <div className="min-h-screen flex bg-white">
       {/* Sidebar */}
-      <Sidebar isOpen={sidebarOpen} setIsOpen={setSidebarOpen} />
+      <Sidebar
+       isOpen={sidebarOpen} setIsOpen={setSidebarOpen} />
 
       <div className="flex-1 flex flex-col">
         {/* Topbar */}
-        <Topbar sidebarOpen={sidebarOpen} title={pageTitle} />
+        <Topbar 
+        sidebarOpen={sidebarOpen} title={pageTitle} />
 
         {/* Page Content */}
         <main
