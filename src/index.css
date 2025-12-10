@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+/* Remove focus outline for all recharts elements */
+.recharts-wrapper *:focus {
+  outline: none !important;
+}
+
+
