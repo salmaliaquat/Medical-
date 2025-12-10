@@ -1,12 +1,9 @@
-
-
-
 import { useState } from "react";
 
 import { Outlet, useLocation } from "react-router-dom";
-import Sidebar from "../common/Sidebar.JSX";
+import Sidebar from "../common/sidebar";
 import Topbar from "../common/Topbar";
-import { Sidebar } from "lucide-react";
+// import { Sidebar } from "lucide-react";
 
 const MainLayout = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -38,12 +35,12 @@ const MainLayout = () => {
     <div className="min-h-screen flex bg-white">
       {/* Sidebar */}
       <Sidebar
-       isOpen={sidebarOpen} setIsOpen={setSidebarOpen} />
+        isOpen={sidebarOpen} setIsOpen={setSidebarOpen} />
 
       <div className="flex-1 flex flex-col">
         {/* Topbar */}
-        <Topbar 
-        sidebarOpen={sidebarOpen} title={pageTitle} />
+        <Topbar
+          sidebarOpen={sidebarOpen} title={pageTitle} />
 
         {/* Page Content */}
         <main
