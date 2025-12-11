@@ -61,7 +61,7 @@ const ProductsCard = ({ products, addToCart }) => {
                     disabled:opacity-50 text-primary-foreground shadow rounded-md text-xs bg-teal-600 hover:bg-teal-700 
                     h-7 px-3"
                   >
-                    <Plus className="w-3 h-3" />
+                    <Plus className="w-3 h-3 text-white" />
                   </button>
                 </div>
               </div>

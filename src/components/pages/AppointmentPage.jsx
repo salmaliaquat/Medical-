@@ -1,42 +1,4 @@
-// import React, { useState } from "react";
-// import Header from "../appointments/Header";
-// import Calendar from "../appointments/Calender";
-// import AppointmentList from "../appointments/AppointmentsList";
 
-// const AppointmentsPage = () => {
-//   const [selectedDate, setSelectedDate] = useState(new Date());
-//   const [appointments, setAppointments] = useState([]);
-
-//   return (
-//     <main className="p-6">
-//       <div className="space-y-6">
-//         <Header
-//           title="Appointments"
-//           description="Manage patient appointments and schedules"
-//           onNew={() => alert("Create new appointment")}
-//         />
-
-//         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-//           <Calendar
-//             selectedDate={selectedDate}
-//             onSelectDate={setSelectedDate}
-//           />
-//           <AppointmentList
-//             date={selectedDate.toLocaleDateString("en-US", {
-//               weekday: "long",
-//               year: "numeric",
-//               month: "long",
-//               day: "numeric",
-//             })}
-//             appointments={appointments}
-//           />
-//         </div>
-//       </div>
-//     </main>
-//   );
-// };
-
-// export default AppointmentsPage;
 
 
 import React, { useState } from "react";
@@ -47,9 +9,42 @@ import AppointmentModal from "../appointments/AppointmentModal"; // import modal
 
 const AppointmentsPage = () => {
   const [selectedDate, setSelectedDate] = useState(new Date());
-  const [appointments, setAppointments] = useState([]);
+  // const [appointments, setAppointments] = useState([]);
+  const [appointments, setAppointments] = useState([
+    {
+      id: 1,
+      patient: "Ahmed Raza",
+      doctor: "Dr. Sara Khan",
+      time: "10:00 AM",
+      reason: "Fever & Headache",
+      status: "Scheduled",
+      fee: 1500,
+      date: "2025-12-11",
+    },
+    {
+      id: 2,
+      patient: "Maria Ali",
+      doctor: "Dr. Usman",
+      time: "1:00 PM",
+      reason: "Follow-up",
+      status: "Confirmed",
+      fee: 2000,
+      date: "2025-12-11",
+    },
+    // {
+    //   id: 3,
+    //   patient: "Bilal Ahmad",
+    //   doctor: "Dr. Ayesha",
+    //   time: "3:30 PM",
+    //   reason: "Skin Allergy",
+    //   status: "C",
+    //   fee: 1800,
+    //   date: "2025-12-11",
+    // }
+  ]);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [editingAppointment, setEditingAppointment] = useState(null);
+
 
   // Create new appointment
   const handleCreate = (newAppointment) => {
@@ -92,9 +87,10 @@ const AppointmentsPage = () => {
               month: "long",
               day: "numeric",
             })}
-            appointments={appointments.filter(
-              (appt) => appt.date === selectedDate.toISOString().split("T")[0]
-            )}
+            appointments={appointments
+              .filter(appt => appt.date === selectedDate.toISOString().split("T")[0])
+              // .filter(appt => statusFilter === "All" || appt.status === statusFilter)
+            }
             onEdit={(appt) => {
               setEditingAppointment(appt);
               setIsModalOpen(true);

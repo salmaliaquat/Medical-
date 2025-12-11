@@ -3,6 +3,7 @@ import MainLayout from "./components/layout/MainLayout";
 import Dashboard from "./components/pages/Dashboard";
 import POSPage from "./components/pages/POSPage";
 import AppointmentsPage from "./components/pages/AppointmentPage";
+import PatientsPage from "./components/pages/PatientsPage";
 
 
 
@@ -16,6 +17,7 @@ function App() {
           <Route path="/" element={<Dashboard/>} />
           <Route path="/pos" element={<POSPage/>} />
           <Route path="/appointments" element={<AppointmentsPage/>} />
+          <Route path="/patients" element={<PatientsPage/>} />
         </Route>
 
       </Routes>
