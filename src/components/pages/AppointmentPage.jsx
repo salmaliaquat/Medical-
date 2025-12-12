@@ -1,6 +1,3 @@
-
-
-
 import React, { useState } from "react";
 import Header from "../appointments/Header";
 import Calendar from "../appointments/Calender";
@@ -19,7 +16,7 @@ const AppointmentsPage = () => {
       reason: "Fever & Headache",
       status: "Scheduled",
       fee: 1500,
-      date: "2025-12-11",
+      date: "2025-12-12",
     },
     {
       id: 2,
@@ -29,18 +26,9 @@ const AppointmentsPage = () => {
       reason: "Follow-up",
       status: "Confirmed",
       fee: 2000,
-      date: "2025-12-11",
+      date: "2025-12-12",
     },
-    // {
-    //   id: 3,
-    //   patient: "Bilal Ahmad",
-    //   doctor: "Dr. Ayesha",
-    //   time: "3:30 PM",
-    //   reason: "Skin Allergy",
-    //   status: "C",
-    //   fee: 1800,
-    //   date: "2025-12-11",
-    // }
+   
   ]);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [editingAppointment, setEditingAppointment] = useState(null);
@@ -80,7 +68,13 @@ const AppointmentsPage = () => {
             events={appointments.map((a) => new Date(a.date).toDateString())} // highlight events
           />
 
-          <AppointmentList
+<AppointmentList
+  date={selectedDate.toLocaleDateString("en-US", { weekday: "long", year: "numeric", month: "long", day: "numeric" })}
+  appointments={appointments} // <- show all for now
+  onEdit={(appt) => { setEditingAppointment(appt); setIsModalOpen(true); }}
+/>
+
+          {/* <AppointmentList
             date={selectedDate.toLocaleDateString("en-US", {
               weekday: "long",
               year: "numeric",
@@ -95,7 +89,7 @@ const AppointmentsPage = () => {
               setEditingAppointment(appt);
               setIsModalOpen(true);
             }}
-          />
+          /> */}
         </div>
       </div>
 

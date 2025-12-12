@@ -23,7 +23,6 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
     { name: "POS", icon: ShoppingCart, path: "/pos" },
     { name: "Appointments", icon: CalendarCheck, path: "/appointments" },
     { name: "Patients", icon: Users, path: "/patients" },
-    { name: "Add Patient", icon: UserPlus, path: "/patients/add" },
     { name: "Doctors", icon: Stethoscope, path: "/doctors" },
     { name: "Products", icon: Package, path: "/products" },
     { name: "Purchases", icon: PackagePlus, path: "/purchases" },

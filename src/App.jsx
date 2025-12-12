@@ -4,6 +4,9 @@ import Dashboard from "./components/pages/Dashboard";
 import POSPage from "./components/pages/POSPage";
 import AppointmentsPage from "./components/pages/AppointmentPage";
 import PatientsPage from "./components/pages/PatientsPage";
+import DoctorsPage from "./components/doctors/DoctorsPage";
+import ProductsPage from "./components/product/ProductsPage";
+import PurchasesPage from "./components/purchases/PurchasesPage";
 
 
 
@@ -18,6 +21,9 @@ function App() {
           <Route path="/pos" element={<POSPage/>} />
           <Route path="/appointments" element={<AppointmentsPage/>} />
           <Route path="/patients" element={<PatientsPage/>} />
+          <Route path="/doctors" element={<DoctorsPage/>} />
+          <Route path="/products" element={<ProductsPage/>} />
+          <Route path="/purchases" element={<PurchasesPage/>} />
         </Route>
 
       </Routes>

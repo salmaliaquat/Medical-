@@ -60,7 +60,7 @@ const AppointmentModal = ({
             <div className="space-y-2">
               <label className="text-sm font-medium">Patient *</label>
               <select
-                className="flex h-9 w-full rounded-md border border-input bg-transparent px-3 text-sm shadow-sm"
+                className="flex h-9 w-full rounded-md border border-gray-200 border-input bg-transparent px-3 text-base shadow-sm focus:outline-none focus:ring-1 focus:ring-gray-400"
                 value={patient}
                 onChange={(e) => setPatient(e.target.value)}
                 required
@@ -78,7 +78,7 @@ const AppointmentModal = ({
             <div className="space-y-2">
               <label className="text-sm font-medium">Doctor *</label>
               <select
-                className="flex h-9 w-full rounded-md border border-input bg-transparent px-3 text-sm shadow-sm"
+                className="flex h-9 w-full rounded-md border border-gray-200 border-input bg-transparent px-3 text-base shadow-sm focus:outline-none focus:ring-1 focus:ring-gray-400"
                 value={doctor}
                 onChange={(e) => setDoctor(e.target.value)}
                 required
@@ -95,7 +95,7 @@ const AppointmentModal = ({
               <label className="text-sm font-medium">Date *</label>
               <input
                 type="date"
-                className="flex h-9 w-full rounded-md border border-input bg-transparent px-3 text-base shadow-sm"
+                className="flex h-9 w-full rounded-md border border-gray-200 border-input bg-transparent px-3 text-base shadow-sm focus:outline-none focus:ring-1 focus:ring-gray-400"
                 value={date}
                 onChange={(e) => setDate(e.target.value)}
                 required
@@ -107,7 +107,7 @@ const AppointmentModal = ({
               <label className="text-sm font-medium">Time *</label>
               <input
                 type="time"
-                className="flex h-9 w-full rounded-md border border-input bg-transparent px-3 text-base shadow-sm"
+                className="flex h-9 w-full rounded-md border border-gray-200 border-input bg-transparent px-3 text-base shadow-sm focus:outline-none focus:ring-1 focus:ring-gray-400"
                 value={time}
                 onChange={(e) => setTime(e.target.value)}
                 required
@@ -119,7 +119,7 @@ const AppointmentModal = ({
               <label className="text-sm font-medium">Consultation Fee</label>
               <input
                 type="number"
-                className="flex h-9 w-full rounded-md border border-input bg-transparent px-3 text-base shadow-sm"
+                className="flex h-9 w-full rounded-md border border-gray-200 border-input bg-transparent px-3 text-base shadow-sm focus:outline-none focus:ring-1 focus:ring-gray-400"
                 value={fee}
                 onChange={(e) => setFee(e.target.value)}
                 step="0.01"
@@ -130,7 +130,7 @@ const AppointmentModal = ({
             <div className="space-y-2">
               <label className="text-sm font-medium">Status</label>
               <select
-                className="flex h-9 w-full rounded-md border border-input bg-transparent px-3 text-sm shadow-sm"
+                className="flex h-9 w-full rounded-md borderborder-gray-200 border-input bg-transparent px-3 text-base shadow-sm focus:outline-none focus:ring-1 focus:ring-gray-400"
                 value={status}
                 onChange={(e) => setStatus(e.target.value)}
               >
@@ -146,7 +146,7 @@ const AppointmentModal = ({
           <div className="space-y-2">
             <label className="text-sm font-medium">Reason for Visit</label>
             <textarea
-              className="flex min-h-[60px] w-full rounded-md border border-input bg-transparent px-3 py-2 text-base shadow-sm"
+              className="flex min-h-[60px] w-full rounded-md border border-gray-200 border-input bg-transparent px-3 text-base shadow-sm focus:outline-none focus:ring-1 focus:ring-gray-400"
               placeholder="Enter reason for visit"
               value={reason}
               onChange={(e) => setReason(e.target.value)}
@@ -158,7 +158,7 @@ const AppointmentModal = ({
           <div className="space-y-2">
             <label className="text-sm font-medium">Notes</label>
             <textarea
-              className="flex min-h-[60px] w-full rounded-md border border-input bg-transparent px-3 py-2 text-base shadow-sm"
+              className="flex min-h-[60px] w-full rounded-md border border-gray-200 border-input bg-transparent px-3 text-base shadow-sm focus:outline-none focus:ring-1 focus:ring-gray-400"
               placeholder="Additional notes"
               value={notes}
               onChange={(e) => setNotes(e.target.value)}

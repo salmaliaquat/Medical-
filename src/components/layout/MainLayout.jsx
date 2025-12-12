@@ -15,7 +15,6 @@ const MainLayout = () => {
     "/pos": "POS",
     "/appointments": "Appointments",
     "/patients": "Patients",
-    "/patients/add": "Add Patient",
     "/doctors": "Doctors",
     "/products": "Products",
     "/purchases": "Purchases",
@@ -38,7 +37,9 @@ const MainLayout = () => {
   }, []);
 
   return (
-    <div className="min-h-screen flex bg-white">
+    // <div className="min-h-screen flex bg-white">
+    <div className="min-h-screen bg-white flex flex-col md:flex-row">
+
       {/* Sidebar */}
       <Sidebar isOpen={sidebarOpen} setIsOpen={setSidebarOpen} />
 
@@ -50,7 +51,6 @@ const MainLayout = () => {
           title={pageTitle}
         />
 
-        {/* <Topbar sidebarOpen={sidebarOpen} title={pageTitle} /> */}
 
         {/* Page Content */}
         <main
