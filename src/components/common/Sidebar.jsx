@@ -100,7 +100,7 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
                 to={link.path}
                 className={({ isActive }) =>
                   `flex items-center gap-3 px-4 py-3 rounded-lg mx-2 my-1 transition-all
-                  ${isActive ? "bg-gradient-to-r from-teal-500 to-teal-600 text-white" : "text-slate-700 hover:bg-gray-100"}`
+                  ${isActive ? "bg-gradient-to-r from-teal-500 to-teal-600 text-white" : "text-slate-700  hover:bg-gray-100 hover:text-teal-600"}`
                 }
               >
                 <Icon size={20} />

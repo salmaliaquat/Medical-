@@ -7,6 +7,11 @@ import PatientsPage from "./components/pages/PatientsPage";
 import DoctorsPage from "./components/doctors/DoctorsPage";
 import ProductsPage from "./components/product/ProductsPage";
 import PurchasesPage from "./components/purchases/PurchasesPage";
+import SalesPage from "./components/sales/SalesPage";
+import MedicalTestsPage from "./components/test/MedicalTestsPage";
+import ExpensesPage from "./components/expenses/ExpensesPage";
+import ReportsPage from "./components/reports/ReportsPage";
+import UserManagementPage from "./components/users/UserManagementPage";
 
 
 
@@ -24,6 +29,11 @@ function App() {
           <Route path="/doctors" element={<DoctorsPage/>} />
           <Route path="/products" element={<ProductsPage/>} />
           <Route path="/purchases" element={<PurchasesPage/>} />
+          <Route path="/sales" element={<SalesPage/>} />
+          <Route path="/tests" element={<MedicalTestsPage/>} />
+          <Route path="/expenses" element={<ExpensesPage/>} />
+          <Route path="/reports" element={<ReportsPage/>} />
+          <Route path="/users" element={<UserManagementPage/>} />
         </Route>
 
       </Routes>
