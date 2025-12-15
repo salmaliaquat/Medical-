@@ -173,7 +173,7 @@ const SalesTable = ({ search = "", filter = "all" }) => {
 
   return (
     <div className="rounded-xl shadow-lg bg-white/80 backdrop-blur overflow-x-auto">
-      <table className="w-full text-sm">
+      <table className="whitespace-nowrap w-full text-sm">
         <thead className="border-b border-gray-300 bg-slate-50">
           <tr>
             {[

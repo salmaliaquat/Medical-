@@ -12,6 +12,9 @@ import MedicalTestsPage from "./components/test/MedicalTestsPage";
 import ExpensesPage from "./components/expenses/ExpensesPage";
 import ReportsPage from "./components/reports/ReportsPage";
 import UserManagementPage from "./components/users/UserManagementPage";
+import RolesPage from "./components/pages/RolesPage";
+import ActivityLogPage from "./components/pages/ActivityLogPage";
+import SettingsPage from "./components/pages/SettingsPage";
 
 
 
@@ -34,6 +37,9 @@ function App() {
           <Route path="/expenses" element={<ExpensesPage/>} />
           <Route path="/reports" element={<ReportsPage/>} />
           <Route path="/users" element={<UserManagementPage/>} />
+          <Route path="/roles" element={<RolesPage/>} />
+          <Route path="/activity" element={<ActivityLogPage/>} />
+          <Route path="/settings" element={<SettingsPage/>} />
         </Route>
 
       </Routes>

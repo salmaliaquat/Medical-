@@ -3,7 +3,7 @@ import UserStatsCard from "./UserStatsCard";
 import SearchAndFilter from "./SearchAndFilter";
 import UserTable from "./UserTable";
 import UserModal from "./UserModel";
-import { LucideUserCog, LucideLockOpen, LucideLock, LucideShield } from "lucide-react";
+import { LucideUserCog, LucideLockOpen, LucideLock, LucideShield , Plus } from "lucide-react";
 
 const UserManagementPage = () => {
     const [search, setSearch] = useState("");
@@ -63,8 +63,8 @@ const UserManagementPage = () => {
                     <h1 className="text-3xl font-bold text-slate-900">User Management</h1>
                     <p className="text-slate-600 mt-1">Manage system users, roles, and permissions</p>
                 </div>
-                <button onClick={() => setModalOpen(true)} className="btn-submit inline-flex items-center gap-2 h-9 px-4">
-                    <LucideUserCog className="w-5 h-5" /> Add User
+                <button onClick={() => setModalOpen(true)} className="bg-purple-500 text-white rounded-md btn-submit inline-flex items-center gap-2 h-9 px-4">
+                    <Plus className="w-5 h-5" /> Add User
                 </button>
             </div>
 

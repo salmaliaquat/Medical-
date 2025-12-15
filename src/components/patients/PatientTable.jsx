@@ -2,11 +2,14 @@ import React from "react";
 import { Pen } from "lucide-react";
 
 const PatientTable = ({ patients, onEdit }) => (
+
   <div className="rounded-xl text-card-foreground border-0 shadow-lg bg-white/80 backdrop-blur p-0">
 
     {/* Scroll on small screens ONLY */}
-    <div className="overflow-x-auto ">
-      <table className="w-full  caption-bottom text-sm">
+   <div className="overflow-x-auto max-w-full">
+
+      <table className="min-w-full caption-bottom text-sm whitespace-nowrap">
+
         <thead>
           <tr className="border-b border-gray-300 bg-slate-100 text-gray-400">
             <th className="h-10 px-2 text-left font-semibold">Patient</th>

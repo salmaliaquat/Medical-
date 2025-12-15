@@ -4,7 +4,7 @@ import TestRow from "./TestRow";
 const TestsTable = ({ tests, onEdit }) => {
   return (
     <div className="rounded-xl shadow-lg bg-white/80 backdrop-blur overflow-x-auto">
-      <table className="w-full text-sm">
+      <table className="w-full text-sm whitespace-nowrap">
         <thead className="bg-slate-50 border-b border-gray-300">
           <tr>
             {["Test #", "Patient", "Test Name", "Category", "Date", "Fee", "Status", "Actions"]

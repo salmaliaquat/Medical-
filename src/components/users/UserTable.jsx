@@ -1,9 +1,10 @@
 import React from "react";
+import {Pen, Edit3 , Pencil} from 'lucide-react'
 
 const UserTable = ({ users, onEdit }) => {
   return (
     <div className="rounded-xl text-card-foreground border-0 shadow-lg bg-white/80 backdrop-blur overflow-x-auto">
-      <table className="w-full caption-bottom text-sm">
+      <table className="whitespace-nowrap w-full caption-bottom text-sm">
         <thead className="bg-slate-50">
           <tr className="border-b border-gray-300 text-gray-500">
             {["User", "Email", "Role", "Department", "Last Login", "Status", "Actions"].map((head) => (
@@ -21,7 +22,9 @@ const UserTable = ({ users, onEdit }) => {
               <td className="p-2">{user.lastLogin}</td>
               <td className="p-2">{user.status}</td>
               <td className="p-2">
-                <button className="text-indigo-600 hover:underline">Edit</button>
+                <button className="text-indigo-600 hover:underline">
+                    <Edit3 className="w-5 h-5"/>
+                    </button>
               </td>
             </tr>
           ))}

@@ -85,8 +85,10 @@ const PatientsPage = () => {
 
       <PatientSearch value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
 
-      
-        <PatientTable patients={filteredPatients} onEdit={handleEditClick} />
+      <div className="flex-1 min-w-0">
+         <PatientTable patients={filteredPatients} onEdit={handleEditClick} />
+      </div>
+       
       
 
       {isModalOpen && (
