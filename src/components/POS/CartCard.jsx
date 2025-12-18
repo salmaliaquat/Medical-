@@ -1,5 +1,3 @@
-
-
 import React from "react";
 import { Trash2, X, Minus, Plus, ShoppingCart, User, Banknote, CreditCard, Smartphone, Check } from "lucide-react";
 
